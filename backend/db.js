@@ -4,3 +4,6 @@ const connectToMongo = () => {
     mongoose.connect(mongoUri, ()=>{console.log("Connected to Mongo Db Successfully")});
 }
 module.exports = connectToMongo;
+
+//inside db file
+//mongo db collection - static code
