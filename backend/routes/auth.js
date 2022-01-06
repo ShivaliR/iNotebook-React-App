@@ -33,7 +33,7 @@ router.post(
       const data = {
           id: req.body._id
       }
-      var authToken = jwt.sign(data, JWT_SECRET_KEY);//jwt sign is a synchronous method.
+      var authToken = jwt.sign(data, JWT_SECRET_KEY);//jwt sign is a synchronous method, so doesn't require await
       console.log(authToken);
       //Create a new user
       user = await User.create({
