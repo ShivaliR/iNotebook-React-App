@@ -8,7 +8,7 @@ const port=5000;
 //     res.send('Hello new Request!');
 //   })
 app.use(express.json())//use middleware if you want to use req.body
-/*End Points*/
+/*End Points -- Available routes*/
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/notes', require('./routes/notes'))
 // app.use('/', (req, res)=>{    
