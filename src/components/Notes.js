@@ -1,19 +1,15 @@
 import React, { useContext }  from 'react'
 import contextValue from '../context/notes/NoteContext'
+import Noteitem from './Noteitem';
 
 const Notes = () => {
     const context = useContext(contextValue);
     const {notes,setNotes} = context;
     return (
         <div>
-          <div className="container my-3">
-          <h2>Your notes</h2>
-        {notes.map((note)=>{
-            return note.title;
-        })}
-      </div>   
+         <Noteitem notes={notes}/>
         </div>
     )
 }
 
-export default Notes
+export default Notes;

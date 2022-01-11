@@ -26,15 +26,16 @@ router.post(
       min: 5,
     }),
   ],
-  async (req, res) => {
+  async (req, res) => {try {
+      //destructuring concept
+      const { title, description, tag } = req.body;
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    try {
-      //destructuring concept
-      const { title, description, tag } = req.body;
-      const note = new Note({
+    
+    
+    const note = new Note({
         title,
         description,
         tag,
@@ -46,7 +47,6 @@ router.post(
       console.error(error.message);
       res.status(500).send("Internal Server Error");
     }
-    res.json({ Success: "Note has been added", note: note });
   }
 );
 
