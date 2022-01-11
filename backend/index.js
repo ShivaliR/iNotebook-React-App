@@ -15,7 +15,7 @@ app.use('/api/notes', require('./routes/notes'))
 //   res.json();
 // })
 app.listen(port,()=>{
-    console.log("Listening to port:" +port);
+    console.log("iNotebook backend listening to port:" +port);
 }) 
 
 //inside index file
